@@ -25,7 +25,7 @@ module top_vga(
 	parameter [10:0] img_len = 11'd1920; // length
 	parameter [10:0] img_h = 11'd1080;	 // height
 
-	reg [21] rom_addr;	// wid > lg(1920 * 1080) / lg2
+	reg [21:0] rom_addr;	// wid > lg(1920 * 1080) / lg2
 	wire [11:0] douta;
 	reg [11:0] output_data;
 
