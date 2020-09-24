@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Sep 24 10:31:19 2020
+| Date         : Thu Sep 24 14:53:50 2020
 | Host         : DESKTOP-44J0ERR running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_flyinglogo_control_sets_placed.rpt
 | Design       : top_flyinglogo
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |     5 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    29 |
+| Unused register locations in slices containing registers |    30 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -45,9 +45,9 @@ Table of Contents
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     1 |
-| >= 12 to < 14      |     0 |
+| >= 12 to < 14      |     1 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     3 |
+| >= 16              |     2 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -63,7 +63,7 @@ Table of Contents
 | No           | Yes                   | No                     |              12 |            4 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              34 |           10 |
+| Yes          | Yes                   | No                     |              17 |            5 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -75,9 +75,9 @@ Table of Contents
 +-------------------+---------------+---------------------+------------------+----------------+
 |  clk_IBUF         |               |                     |                1 |              1 |
 |  u0/inst/clk_out1 |               |                     |                6 |             11 |
-|  u0/inst/clk_out1 | u2/addr       | u2/rst_n_reg        |                5 |             17 |
+|  u0/inst/clk_out1 |               | u2/SR[0]            |                4 |             12 |
+|  u0/inst/clk_out1 |               | rst_n               |                4 |             17 |
 |  u0/inst/clk_out1 | u2/y_cnt      | u2/y_cnt[0]_i_1_n_0 |                5 |             17 |
-|  u0/inst/clk_out1 |               | rst_n               |                8 |             29 |
 +-------------------+---------------+---------------------+------------------+----------------+
 
 

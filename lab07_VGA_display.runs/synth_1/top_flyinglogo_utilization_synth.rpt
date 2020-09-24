@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Sep 24 10:29:49 2020
+| Date         : Thu Sep 24 14:52:40 2020
 | Host         : DESKTOP-44J0ERR running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_flyinglogo_utilization_synth.rpt -pb top_flyinglogo_utilization_synth.pb
 | Design       : top_flyinglogo
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   95 |     0 |     20800 |  0.46 |
-|   LUT as Logic          |   95 |     0 |     20800 |  0.46 |
+| Slice LUTs*             |   99 |     0 |     20800 |  0.48 |
+|   LUT as Logic          |   99 |     0 |     20800 |  0.48 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |   64 |     0 |     41600 |  0.15 |
-|   Register as Flip Flop |   64 |     0 |     41600 |  0.15 |
+| Slice Registers         |   47 |     0 |     41600 |  0.11 |
+|   Register as Flip Flop |   47 |     0 |     41600 |  0.11 |
 |   Register as Latch     |    0 |     0 |     41600 |  0.00 |
 | F7 Muxes                |    0 |     0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |      8150 |  0.00 |
@@ -54,10 +54,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 1     |          Yes |           - |          Set |
-| 16    |          Yes |           - |        Reset |
-| 1     |          Yes |         Set |            - |
-| 46    |          Yes |       Reset |            - |
+| 0     |          Yes |           - |          Set |
+| 17    |          Yes |           - |        Reset |
+| 0     |          Yes |         Set |            - |
+| 30    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -77,11 +77,12 @@ Table of Contents
 3. DSP
 ------
 
-+-----------+------+-------+-----------+-------+
-| Site Type | Used | Fixed | Available | Util% |
-+-----------+------+-------+-----------+-------+
-| DSPs      |    0 |     0 |        90 |  0.00 |
-+-----------+------+-------+-----------+-------+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |    1 |     0 |        90 |  1.11 |
+|   DSP48E1 only |    1 |       |           |       |
++----------------+------+-------+-----------+-------+
 
 
 4. IO and GT Specific
@@ -146,19 +147,18 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   46 |        Flop & Latch |
-| LUT1     |   31 |                 LUT |
-| LUT6     |   29 |                 LUT |
-| LUT2     |   22 |                 LUT |
-| CARRY4   |   22 |          CarryLogic |
-| FDCE     |   16 |        Flop & Latch |
+| LUT6     |   36 |                 LUT |
+| LUT2     |   35 |                 LUT |
+| LUT1     |   30 |                 LUT |
+| FDRE     |   30 |        Flop & Latch |
+| FDCE     |   17 |        Flop & Latch |
+| CARRY4   |   17 |          CarryLogic |
 | OBUF     |   14 |                  IO |
-| LUT5     |   11 |                 LUT |
-| LUT4     |   11 |                 LUT |
-| LUT3     |   11 |                 LUT |
+| LUT3     |    6 |                 LUT |
+| LUT5     |    3 |                 LUT |
+| LUT4     |    2 |                 LUT |
 | IBUF     |    2 |                  IO |
-| FDSE     |    1 |        Flop & Latch |
-| FDPE     |    1 |        Flop & Latch |
+| DSP48E1  |    1 |    Block Arithmetic |
 +----------+------+---------------------+
 
 

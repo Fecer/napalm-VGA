@@ -22,10 +22,10 @@ module top_flyinglogo(clk, rst, hsync, vsync, vga_r, vga_g, vga_b);
    wire            inArea;
    reg [9:0]       logo_x;
    reg [9:0]       logo_y;
-   parameter [16:0] WIDTH = 17'd240;
-   //wire [16:0] addr;
-   //assign addr = (v_cnt - 1) * WIDTH + h_cnt;
-   reg [16:0] addr;
+   parameter [16:0] WIDTH = 17'd320;
+   wire [16:0] addr;
+   assign addr = {1'b0, v_cnt[16:1]} * WIDTH + {1'b0, h_cnt[16:1]};
+   //reg [16:0] addr;
    reg [7:0]       speed_cnt;
    wire            speed_ctrl;
    
@@ -66,35 +66,35 @@ module top_flyinglogo(clk, rst, hsync, vsync, vga_r, vga_g, vga_b);
    begin: logo_display
       if (rst_n == 1'b1) begin
          vga_data <= 12'b000000000000;
-         addr <= 17'd0;
+         //addr <= 17'd0;
       end
       else 
       begin
-         if (valid == 1'b1)
-         begin
-         
-            /*if (h_cnt <= 17'd320) begin
-                addr <= addr + 17'b1;
+          if (!(hsync && vsync) ) begin
+               //addr <= addr;
+               vga_data <= 12'd0;
+          end
+          else if (valid == 1'b1) begin
+          vga_data <= douta;
+            /*if (h_cnt <= 17'd100) begin
+               //addr <= addr;
+                vga_data <= 12'hf00;
+            end
+            else if (h_cnt >= 17'd161 && h_cnt <= 17'd480 && v_cnt >= 17'd121 && v_cnt <= 17'd360) begin
+                //addr <= addr + 17'b1;
                 vga_data <= douta;
             end
-            else if (h_cnt <= 17'd370) begin
-                addr <= addr;
-                vga_data <= 12'h0f0;
-            end
-            else if (h_cnt <= 17'd470) begin
-                addr <= addr;
-                vga_data <= 12'h00f;
-            end
             else begin
-                addr <= addr;
-                vga_data <= 12'hfff;
+                //addr <= addr;
+                vga_data <= 12'hf0f;
             end*/
          end
          else
          begin
             vga_data <= 12'b111111111111;
-                if (h_cnt == 0 && v_cnt == 0)
-                    addr <= 0;
+                /*if (h_cnt == 0 && v_cnt == 0)begin
+                    addr <= 17'd0;
+                end*/
          end
       end
    end

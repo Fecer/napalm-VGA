@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1600914478">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1600930292">
   <File Type="PA-TCL" Name="top_flyinglogo.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_flyinglogo_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_flyinglogo_reports.tcl"/>
@@ -52,6 +52,12 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/test0.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../desktop.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
