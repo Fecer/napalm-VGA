@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../lab07_VGA_display.srcs/sources_1/ip/dcm_25m_2" \
+"../../../../lab07_VGA_display.srcs/sources_1/ip/logo_rom_2/sim/logo_rom.v" \
+"../../../../lab07_VGA_display.srcs/sources_1/ip/dcm_25m_2/dcm_25m_clk_wiz.v" \
+"../../../../lab07_VGA_display.srcs/sources_1/ip/dcm_25m_2/dcm_25m.v" \
+"../../../../lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v" \
+"../../../../lab07_VGA_display.srcs/sources_1/new/toPosedge.v" \
+"../../../../lab07_VGA_display.srcs/sources_1/imports/source/top_flyinglogo.v" \
+"../../../../lab07_VGA_display.srcs/sources_1/imports/source/vga_timing.v" \
+"../../../../lab07_VGA_display.srcs/sources_1/imports/source/tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

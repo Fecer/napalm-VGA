@@ -28,8 +28,9 @@ module vga_640x480(pclk, reset, hsync, vsync, valid, h_cnt, v_cnt);
    
    
    always @(posedge reset or posedge pclk)
-      if (reset == 1'b1)
+      if (reset == 1'b1) begin
          x_cnt <= 0;
+      end
       else 
       begin
          if (x_cnt == h_total - 1)

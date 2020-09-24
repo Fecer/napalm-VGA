@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Thu Sep 24 13:27:45 2020
+-- Date        : Thu Sep 24 19:56:32 2020
 -- Host        : DESKTOP-44J0ERR running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/ip/logo_rom_1/logo_rom_stub.vhdl

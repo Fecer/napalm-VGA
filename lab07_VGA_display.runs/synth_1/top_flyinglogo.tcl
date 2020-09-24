@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 2
 set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcsg324-1
 
@@ -36,17 +35,20 @@ add_files d:/test7.coe
 add_files C:/vga/lab07_VGA_display/test7.coe
 add_files C:/vga/lab07_VGA_display/test0.coe
 add_files C:/desktop.coe
+add_files C:/vga/lab07_VGA_display/screen.coe
 read_verilog -library xil_defaultlib {
+  C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v
+  C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/new/toPosedge.v
   C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/vga_timing.v
   C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/top_flyinglogo.v
 }
-read_ip -quiet C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/ip/dcm_25m_1/dcm_25m.xci
-set_property used_in_implementation false [get_files -all c:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/ip/dcm_25m_1/dcm_25m_board.xdc]
-set_property used_in_implementation false [get_files -all c:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/ip/dcm_25m_1/dcm_25m.xdc]
-set_property used_in_implementation false [get_files -all c:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/ip/dcm_25m_1/dcm_25m_ooc.xdc]
+read_ip -quiet C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/ip/logo_rom_2/logo_rom.xci
+set_property used_in_implementation false [get_files -all c:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/ip/logo_rom_2/logo_rom_ooc.xdc]
 
-read_ip -quiet C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/ip/logo_rom_1/logo_rom.xci
-set_property used_in_implementation false [get_files -all c:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/ip/logo_rom_1/logo_rom_ooc.xdc]
+read_ip -quiet C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/ip/dcm_25m_2/dcm_25m.xci
+set_property used_in_implementation false [get_files -all c:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/ip/dcm_25m_2/dcm_25m_board.xdc]
+set_property used_in_implementation false [get_files -all c:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/ip/dcm_25m_2/dcm_25m.xdc]
+set_property used_in_implementation false [get_files -all c:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/ip/dcm_25m_2/dcm_25m_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -59,6 +61,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/constrs_1/imports/source/display_vga.xdc
 set_property used_in_implementation false [get_files C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/constrs_1/imports/source/display_vga.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

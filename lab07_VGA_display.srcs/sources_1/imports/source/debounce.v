@@ -2,6 +2,7 @@
 
 module debounce(
     input clk,
+    input rst_n,
     input  sig_in,
     output sig_out
     );
@@ -12,11 +13,21 @@ module debounce(
 	
 	always @ (posedge clk)
 	begin
-		q1 <= sig_in;
-		q2 <= q1;
-		q3 <= q2;
+	   if (rst_n) begin
+	       q1 <= 1'b0;
+	       q2 <= 1'b0;
+	       q3 <= 1'b0;
+	   end
+	   else
+	   begin
+            q1 <= sig_in;
+            q2 <= q1;
+            q3 <= q2;
+         end
 	end
 	
-	assign sig_out = q1 & q2 & (!q3);
+	assign sig_out = q3 && q2 && q1;
+	
+	
 	
 endmodule

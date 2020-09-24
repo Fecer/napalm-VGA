@@ -76,8 +76,8 @@ set rc [catch {
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   add_files -quiet C:/vga/lab07_VGA_display/lab07_VGA_display.runs/synth_1/top_flyinglogo.dcp
-  read_ip -quiet C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/ip/dcm_25m_1/dcm_25m.xci
-  read_ip -quiet C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/ip/logo_rom_1/logo_rom.xci
+  read_ip -quiet C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/ip/logo_rom_2/logo_rom.xci
+  read_ip -quiet C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/ip/dcm_25m_2/dcm_25m.xci
   read_xdc C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/constrs_1/imports/source/display_vga.xdc
   link_design -top top_flyinglogo -part xc7a35tcsg324-1
   close_msg_db -file init_design.pb

@@ -1,9 +1,11 @@
 `timescale 1 ns / 1 ns
 
 
-module top_flyinglogo(clk, rst, hsync, vsync, vga_r, vga_g, vga_b);
+module top_flyinglogo(clk, rst, hsync, vsync, vga_r, vga_g, vga_b, buzzer_out, button);
+
    input           clk;
    input           rst;
+   input [1:0]     button;
    
    output          hsync;
    output          vsync;
@@ -24,16 +26,58 @@ module top_flyinglogo(clk, rst, hsync, vsync, vga_r, vga_g, vga_b);
    reg [9:0]       logo_y;
    parameter [16:0] WIDTH = 17'd320;
    wire [16:0] addr;
+   wire             go_up, go_down;
+   reg  [1:0]       focus;
+   reg [11:0]       color;
+   reg [19:0]       cnt;
+   reg              darking;
+   
    assign addr = {1'b0, v_cnt[16:1]} * WIDTH + {1'b0, h_cnt[16:1]};
+   
+   
    //reg [16:0] addr;
    reg [7:0]       speed_cnt;
    wire            speed_ctrl;
    
+   output buzzer_out;
+   
+   buzzer Buzzer(
+    clk, rst, go_up, go_down, buzzer_out);
+   
    reg [3:0]       flag_edge;
    reg rst_n;
+   //assign go_up =  button[1];
+   //assign go_down = button[0];
+   toPosedge btnUp(clk, rst_n, button[1], go_up);
+   toPosedge btnDown(clk, rst_n ,button[0], go_down);
    always @(posedge clk)
    begin
+        if (rst_n) begin
+            focus <= 2'b01;
+        end
+        else begin
+            if (go_up == 1'b1) begin
+            case(focus)
+                2'b00:begin focus <= 2'b11;end
+                2'b01:begin focus <= 2'b00;end
+                2'b10:begin focus <= 2'b01;end
+                2'b11:begin focus <= 2'b10;end
+            endcase
+          end
+          else if (go_down == 1'b1) begin
+            case(focus)
+                2'b00:begin focus <= 2'b01;end
+                2'b01:begin focus <= 2'b10;end
+                2'b10:begin focus <= 2'b11;end
+                2'b11:begin focus <= 2'b00;end
+            endcase
+          end
+          else begin
+            focus <= focus;
+          end
+        end
         rst_n <= ~rst;
+        
    end 
 	  dcm_25m u0
          (
@@ -60,41 +104,60 @@ module top_flyinglogo(clk, rst, hsync, vsync, vga_r, vga_g, vga_b);
 		.v_cnt(v_cnt)
 		);
    
-   //assign inArea = h_cnt <= 17'd320 && v_cnt <= 17'd240 
-   
    always @(posedge pclk)
    begin: logo_display
       if (rst_n == 1'b1) begin
-         vga_data <= 12'b000000000000;
-         //addr <= 17'd0;
+            darking <= 1'b1;
+            color <= 12'hfff;
+            vga_data <= 12'b0;
+            cnt <= 20'b0;
       end
       else 
       begin
+          if(cnt < (20'd1000000 - 20'd1)) begin
+            cnt <= cnt + 20'b1;
+            color <= color;
+            darking <= darking;
+          end
+          else begin
+            cnt <= 20'b0;
+             if(darking) begin
+                color <= color - 12'h111;
+             end
+             else begin 
+                color <= color + 12'h111;
+             end
+             if ((darking && color == 12'h111) || (!darking && color == 12'heee)) begin
+                darking <= ~darking;
+             end
+             else begin
+                darking <= darking;
+             end
+          end
+          
           if (!(hsync && vsync) ) begin
-               //addr <= addr;
                vga_data <= 12'd0;
           end
           else if (valid == 1'b1) begin
-          vga_data <= douta;
-            /*if (h_cnt <= 17'd100) begin
-               //addr <= addr;
-                vga_data <= 12'hf00;
+            if(douta != 12'h0)begin
+                if(v_cnt >= 0 && v_cnt < 160 && focus == 2'b01)begin
+                    vga_data <= color;
+                end
+                else if (v_cnt >= 160 && v_cnt < 320 && focus == 2'b10) begin
+                    vga_data <= color;
+                end
+                else if (v_cnt >= 320 && v_cnt < 480 && focus == 2'b11) begin
+                    vga_data <= color;
+                end
+                else begin
+                    vga_data <= douta;
+                end
             end
-            else if (h_cnt >= 17'd161 && h_cnt <= 17'd480 && v_cnt >= 17'd121 && v_cnt <= 17'd360) begin
-                //addr <= addr + 17'b1;
-                vga_data <= douta;
-            end
-            else begin
-                //addr <= addr;
-                vga_data <= 12'hf0f;
-            end*/
+               vga_data <= douta;
          end
          else
          begin
-            vga_data <= 12'h000;
-                /*if (h_cnt == 0 && v_cnt == 0)begin
-                    addr <= 17'd0;
-                end*/
+            vga_data <= 12'h0;
          end
       end
    end
