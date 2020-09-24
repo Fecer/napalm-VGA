@@ -91,7 +91,7 @@ module top_flyinglogo(clk, rst, hsync, vsync, vga_r, vga_g, vga_b);
          end
          else
          begin
-            vga_data <= 12'b111111111111;
+            vga_data <= 12'h000;
                 /*if (h_cnt == 0 && v_cnt == 0)begin
                     addr <= 17'd0;
                 end*/

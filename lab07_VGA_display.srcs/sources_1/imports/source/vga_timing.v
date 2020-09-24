@@ -10,9 +10,9 @@ module vga_640x480(pclk, reset, hsync, vsync, valid, h_cnt, v_cnt);
    output [16:0] h_cnt;
    output [16:0] v_cnt;
    
-   parameter    h_frontporch = 96;
-   parameter    h_active = 144;
-   parameter    h_backporch = 784;
+   parameter    h_frontporch = 95;
+   parameter    h_active = 143;
+   parameter    h_backporch = 783;
    parameter    h_total = 800;
    
    parameter    v_frontporch = 2;
@@ -63,7 +63,7 @@ module vga_640x480(pclk, reset, hsync, vsync, valid, h_cnt, v_cnt);
    assign valid = ((h_valid == 1'b1) & (v_valid == 1'b1)) ? 1'b1 : 
                   1'b0;
    
-   assign h_cnt = ((h_valid == 1'b1)) ? x_cnt - 17'd144 : 
+   assign h_cnt = ((h_valid == 1'b1)) ? x_cnt - 17'd143 : 
                   {17'b1111_1111_1111_1111_1};
    assign v_cnt = ((v_valid == 1'b1)) ? y_cnt - 17'd36 : 
                   {17'b1111_1111_1111_1111_1};

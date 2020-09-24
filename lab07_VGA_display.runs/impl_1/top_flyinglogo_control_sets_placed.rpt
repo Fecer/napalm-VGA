@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Sep 24 14:53:50 2020
+| Date         : Thu Sep 24 15:26:25 2020
 | Host         : DESKTOP-44J0ERR running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_flyinglogo_control_sets_placed.rpt
 | Design       : top_flyinglogo
@@ -60,7 +60,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |              12 |            7 |
 | No           | No                    | Yes                    |              17 |            4 |
-| No           | Yes                   | No                     |              12 |            4 |
+| No           | Yes                   | No                     |              12 |            3 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |              17 |            5 |
@@ -75,7 +75,7 @@ Table of Contents
 +-------------------+---------------+---------------------+------------------+----------------+
 |  clk_IBUF         |               |                     |                1 |              1 |
 |  u0/inst/clk_out1 |               |                     |                6 |             11 |
-|  u0/inst/clk_out1 |               | u2/SR[0]            |                4 |             12 |
+|  u0/inst/clk_out1 |               | u2/SR[0]            |                3 |             12 |
 |  u0/inst/clk_out1 |               | rst_n               |                4 |             17 |
 |  u0/inst/clk_out1 | u2/y_cnt      | u2/y_cnt[0]_i_1_n_0 |                5 |             17 |
 +-------------------+---------------+---------------------+------------------+----------------+
