@@ -153,7 +153,9 @@ module top_flyinglogo(clk, rst, hsync, vsync, vga_r, vga_g, vga_b, buzzer_out, b
                     vga_data <= douta;
                 end
             end
+            else begin
                vga_data <= douta;
+            end
          end
          else
          begin
