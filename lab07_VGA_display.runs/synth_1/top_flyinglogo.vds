@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Fri Sep 25 01:35:23 2020
-# Process ID: 412
+# Start of session at: Fri Sep 25 09:43:01 2020
+# Process ID: 8416
 # Current directory: C:/vga/lab07_VGA_display/lab07_VGA_display.runs/synth_1
 # Command line: vivado.exe -log top_flyinglogo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_flyinglogo.tcl
 # Log file: C:/vga/lab07_VGA_display/lab07_VGA_display.runs/synth_1/top_flyinglogo.vds
@@ -16,9 +16,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13420 
+INFO: Helper process launched with PID 5468 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 847.391 ; gain = 234.621
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 846.559 ; gain = 234.289
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_flyinglogo' [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/top_flyinglogo.v:4]
 	Parameter WIDTH bound to: 17'b00000000101000000 
@@ -31,13 +31,116 @@ INFO: [Synth 8-6157] synthesizing module 'buzzer' [C:/vga/lab07_VGA_display/lab0
 	Parameter CNT3 bound to: 265000 - type: integer 
 WARNING: [Synth 8-5856] 3D RAM buzzerReg_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
 WARNING: [Synth 8-5856] 3D RAM buzzerContinued_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-6014] Unused sequential element clk2_reg was removed.  [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:33]
+WARNING: [Synth 8-5788] Register MODE_reg in module buzzer is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:1457]
+WARNING: [Synth 8-3848] Net buzzerReg[3][512] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][512] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][512] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][512] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][511] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][511] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][511] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][511] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][510] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][510] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][510] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][510] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][509] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][509] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][509] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][509] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][508] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][508] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][508] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][508] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][507] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][507] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][507] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][507] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][506] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][506] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][506] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][506] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][505] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][505] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][505] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][505] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][504] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][504] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][504] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][504] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][503] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][503] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][503] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][503] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][502] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][502] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][502] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][502] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][501] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][501] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][501] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][501] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][500] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][500] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][500] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][500] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][499] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][499] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][499] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][499] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][498] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][498] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][498] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][498] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][497] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][497] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][497] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][497] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][496] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][496] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][496] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][496] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][495] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][495] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][495] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][495] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][494] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][494] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][494] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][494] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][493] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][493] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][493] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][493] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][492] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][492] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][492] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][492] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][491] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][491] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][491] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][491] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][490] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][490] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][490] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][490] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][489] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][489] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][489] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][489] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[3][488] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[2][488] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[1][488] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+WARNING: [Synth 8-3848] Net buzzerReg[0][488] in module/entity buzzer does not have driver. [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:17]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-6155] done synthesizing module 'buzzer' (1#1) [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/buzzer.v:2]
 INFO: [Synth 8-6157] synthesizing module 'toPosedge' [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/new/toPosedge.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'toPosedge' (2#1) [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/new/toPosedge.v:3]
-INFO: [Synth 8-6157] synthesizing module 'dcm_25m' [C:/vga/lab07_VGA_display/lab07_VGA_display.runs/synth_1/.Xil/Vivado-412-DESKTOP-44J0ERR/realtime/dcm_25m_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'dcm_25m' (3#1) [C:/vga/lab07_VGA_display/lab07_VGA_display.runs/synth_1/.Xil/Vivado-412-DESKTOP-44J0ERR/realtime/dcm_25m_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'logo_rom' [C:/vga/lab07_VGA_display/lab07_VGA_display.runs/synth_1/.Xil/Vivado-412-DESKTOP-44J0ERR/realtime/logo_rom_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'logo_rom' (4#1) [C:/vga/lab07_VGA_display/lab07_VGA_display.runs/synth_1/.Xil/Vivado-412-DESKTOP-44J0ERR/realtime/logo_rom_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'dcm_25m' [C:/vga/lab07_VGA_display/lab07_VGA_display.runs/synth_1/.Xil/Vivado-8416-DESKTOP-44J0ERR/realtime/dcm_25m_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dcm_25m' (3#1) [C:/vga/lab07_VGA_display/lab07_VGA_display.runs/synth_1/.Xil/Vivado-8416-DESKTOP-44J0ERR/realtime/dcm_25m_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'logo_rom' [C:/vga/lab07_VGA_display/lab07_VGA_display.runs/synth_1/.Xil/Vivado-8416-DESKTOP-44J0ERR/realtime/logo_rom_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'logo_rom' (4#1) [C:/vga/lab07_VGA_display/lab07_VGA_display.runs/synth_1/.Xil/Vivado-8416-DESKTOP-44J0ERR/realtime/logo_rom_stub.v:6]
 WARNING: [Synth 8-7023] instance 'u1' of module 'logo_rom' has 5 connections declared, but only 3 given [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/top_flyinglogo.v:91]
 INFO: [Synth 8-6157] synthesizing module 'vga_640x480' [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/vga_timing.v:4]
 	Parameter h_frontporch bound to: 95 - type: integer 
@@ -50,12 +153,8 @@ INFO: [Synth 8-6157] synthesizing module 'vga_640x480' [C:/vga/lab07_VGA_display
 	Parameter v_total bound to: 525 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'vga_640x480' (5#1) [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/vga_timing.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'top_flyinglogo' (6#1) [C:/vga/lab07_VGA_display/lab07_VGA_display.srcs/sources_1/imports/source/top_flyinglogo.v:4]
-WARNING: [Synth 8-3331] design buzzer has unconnected port clk
-WARNING: [Synth 8-3331] design buzzer has unconnected port rst
-WARNING: [Synth 8-3331] design buzzer has unconnected port up
-WARNING: [Synth 8-3331] design buzzer has unconnected port down
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 923.797 ; gain = 311.027
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 983.070 ; gain = 370.801
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -68,12 +167,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 923.797 ; gain = 311.027
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 983.070 ; gain = 370.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 923.797 ; gain = 311.027
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 983.070 ; gain = 370.801
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 923.797 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.247 . Memory (MB): peak = 983.070 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -90,20 +189,20 @@ Parsing XDC File [C:/vga/lab07_VGA_display/lab07_VGA_display.runs/synth_1/dont_t
 Finished Parsing XDC File [C:/vga/lab07_VGA_display/lab07_VGA_display.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1024.105 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1095.910 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.124 . Memory (MB): peak = 1024.105 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.103 . Memory (MB): peak = 1095.910 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1024.105 ; gain = 411.336
+Finished Constraint Validation : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1095.910 ; gain = 483.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1024.105 ; gain = 411.336
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1095.910 ; gain = 483.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -113,34 +212,47 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/vga/
 Applied set_property DONT_TOUCH = true for u1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for u0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1024.105 ; gain = 411.336
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1095.910 ; gain = 483.641
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "buzzer_state" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1024.105 ; gain = 411.336
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1095.910 ; gain = 483.641
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |buzzer__GB0         |           1|     43245|
+|2     |buzzer__GB1         |           1|     11669|
+|3     |top_flyinglogo__GC0 |           1|      2890|
++------+--------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     32 Bit       Adders := 2     
 	   2 Input     17 Bit       Adders := 3     
 +---Registers : 
+	               32 Bit    Registers := 3     
 	               17 Bit    Registers := 1     
 	               12 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
+	                8 Bit    Registers := 685   
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 690   
 +---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
 	   2 Input     17 Bit        Muxes := 3     
 	   2 Input     12 Bit        Muxes := 2     
 	   4 Input     12 Bit        Muxes := 1     
-	   8 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      8 Bit        Muxes := 513   
+	   8 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 10    
+	  23 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 513   
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -159,11 +271,37 @@ Detailed RTL Component Info :
 	   4 Input     12 Bit        Muxes := 1     
 	   8 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 3     
+Module buzzer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                8 Bit    Registers := 685   
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 686   
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   4 Input      8 Bit        Muxes := 513   
+	   8 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	  23 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 513   
+Module toPosedge__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
 Module toPosedge 
 Detailed RTL Component Info : 
 +---Registers : 
-	                1 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
 +---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 1     
 Module vga_640x480 
 Detailed RTL Component Info : 
@@ -193,9 +331,122 @@ Warning: Parallel synthesis criteria is not met
 DSP Report: Generating DSP addr, operation Mode is: C+A*(B:0x140).
 DSP Report: operator addr is absorbed into DSP addr.
 DSP Report: operator addr0 is absorbed into DSP addr.
-WARNING: [Synth 8-3917] design top_flyinglogo has port buzzer_out driven by constant 0
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][394][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][393][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][392][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][391][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][390][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][388][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][386][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][385][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][384][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][383][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][382][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][380][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][379][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][378][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][377][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][376][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][375][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][374][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][373][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][372][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][371][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][370][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][369][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][367][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][366][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][364][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][363][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][362][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][361][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][360][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][359][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][356][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][355][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][354][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][353][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][352][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][351][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][350][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][349][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][348][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][346][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][345][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][344][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][343][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][342][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][341][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][339][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][338][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][337][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][336][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][335][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][334][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][333][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][332][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][331][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][330][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][329][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][328][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][327][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][325][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][324][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][323][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][322][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][321][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][320][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][319][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][317][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][316][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][315][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][313][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][312][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][311][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][310][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][309][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][308][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][307][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][306][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][305][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][304][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][302][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][301][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][300][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][299][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][298][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][297][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][296][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][295][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][294][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Buzzeri_1/\buzzerReg_reg[2][293][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][291][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][290][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][289][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][288][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][286][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][285][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][284][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][283][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][282][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][281][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Buzzeri_1/\buzzerReg_reg[2][280][0] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'Buzzeri_1/MODE_reg[17]' (FDE) to 'Buzzeri_1/MODE_reg[21]'
+INFO: [Synth 8-3886] merging instance 'Buzzeri_1/MODE_reg[18]' (FDE) to 'Buzzeri_1/MODE_reg[19]'
+INFO: [Synth 8-3886] merging instance 'Buzzeri_1/MODE_reg[19]' (FDE) to 'Buzzeri_1/MODE_reg[20]'
+INFO: [Synth 8-3886] merging instance 'Buzzeri_1/MODE_reg[20]' (FDE) to 'Buzzeri_1/MODE_reg[23]'
+INFO: [Synth 8-3886] merging instance 'Buzzeri_1/MODE_reg[21]' (FDE) to 'Buzzeri_1/MODE_reg[22]'
+INFO: [Synth 8-3886] merging instance 'Buzzeri_1/MODE_reg[22]' (FDE) to 'Buzzeri_1/MODE_reg[25]'
+INFO: [Synth 8-3886] merging instance 'Buzzeri_1/MODE_reg[23]' (FDE) to 'Buzzeri_1/MODE_reg[24]'
+INFO: [Synth 8-3886] merging instance 'Buzzeri_1/MODE_reg[24]' (FDE) to 'Buzzeri_1/MODE_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Buzzeri_1/MODE_reg[26]' (FDE) to 'Buzzeri_1/MODE_reg[27]'
+INFO: [Synth 8-3886] merging instance 'Buzzeri_1/MODE_reg[27]' (FDE) to 'Buzzeri_1/MODE_reg[28]'
+INFO: [Synth 8-3886] merging instance 'Buzzeri_1/MODE_reg[28]' (FDE) to 'Buzzeri_1/MODE_reg[29]'
+INFO: [Synth 8-3886] merging instance 'Buzzeri_1/MODE_reg[29]' (FDE) to 'Buzzeri_1/MODE_reg[30]'
+INFO: [Synth 8-3886] merging instance 'Buzzeri_1/MODE_reg[30]' (FDE) to 'Buzzeri_1/MODE_reg[31]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1024.105 ; gain = 411.336
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:01:35 . Memory (MB): peak = 1095.910 ; gain = 483.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -214,33 +465,38 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |buzzer__GB0         |           1|       945|
+|2     |buzzer__GB1         |           1|       135|
+|3     |top_flyinglogo__GC0 |           1|      1050|
++------+--------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:01:10 . Memory (MB): peak = 1044.766 ; gain = 431.996
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:52 ; elapsed = 00:01:56 . Memory (MB): peak = 1095.910 ; gain = 483.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:12 . Memory (MB): peak = 1083.059 ; gain = 470.289
+Finished Timing Optimization : Time (s): cpu = 00:01:58 ; elapsed = 00:02:02 . Memory (MB): peak = 1135.461 ; gain = 523.191
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |top_flyinglogo__GC0 |           1|      1050|
+|2     |top_flyinglogo_GT0  |           1|      1080|
++------+--------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:59 ; elapsed = 00:01:12 . Memory (MB): peak = 1083.059 ; gain = 470.289
+Finished Technology Mapping : Time (s): cpu = 00:02:00 ; elapsed = 00:02:04 . Memory (MB): peak = 1135.461 ; gain = 523.191
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -277,13 +533,13 @@ CRITICAL WARNING: [Synth 8-4442] BlackBox module u1 has unconnected pin dina[2]
 CRITICAL WARNING: [Synth 8-4442] BlackBox module u1 has unconnected pin dina[1]
 CRITICAL WARNING: [Synth 8-4442] BlackBox module u1 has unconnected pin dina[0]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:07 ; elapsed = 00:01:20 . Memory (MB): peak = 1085.953 ; gain = 473.184
+Finished IO Insertion : Time (s): cpu = 00:02:07 ; elapsed = 00:02:12 . Memory (MB): peak = 1147.938 ; gain = 535.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:07 ; elapsed = 00:01:20 . Memory (MB): peak = 1085.953 ; gain = 473.184
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:08 ; elapsed = 00:02:12 . Memory (MB): peak = 1147.938 ; gain = 535.668
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -302,25 +558,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:07 ; elapsed = 00:01:20 . Memory (MB): peak = 1085.953 ; gain = 473.184
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:08 ; elapsed = 00:02:12 . Memory (MB): peak = 1147.938 ; gain = 535.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:07 ; elapsed = 00:01:20 . Memory (MB): peak = 1085.953 ; gain = 473.184
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:08 ; elapsed = 00:02:12 . Memory (MB): peak = 1147.938 ; gain = 535.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:07 ; elapsed = 00:01:20 . Memory (MB): peak = 1085.953 ; gain = 473.184
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:08 ; elapsed = 00:02:12 . Memory (MB): peak = 1147.938 ; gain = 535.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:07 ; elapsed = 00:01:20 . Memory (MB): peak = 1085.953 ; gain = 473.184
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:08 ; elapsed = 00:02:12 . Memory (MB): peak = 1147.938 ; gain = 535.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -340,54 +596,57 @@ Report Cell Usage:
 +------+---------+------+
 |1     |dcm_25m  |     1|
 |2     |logo_rom |     1|
-|3     |CARRY4   |   103|
+|3     |CARRY4   |   128|
 |4     |DSP48E1  |     1|
 |5     |LUT1     |    35|
-|6     |LUT2     |   260|
-|7     |LUT3     |     6|
-|8     |LUT4     |    12|
-|9     |LUT5     |    12|
-|10    |LUT6     |    32|
-|11    |FDCE     |    17|
-|12    |FDRE     |   259|
-|13    |FDSE     |    12|
-|14    |IBUF     |     3|
-|15    |OBUF     |    15|
+|6     |LUT2     |   263|
+|7     |LUT3     |    11|
+|8     |LUT4     |    78|
+|9     |LUT5     |    54|
+|10    |LUT6     |   157|
+|11    |MUXF7    |    27|
+|12    |MUXF8    |     2|
+|13    |FDCE     |   117|
+|14    |FDRE     |   281|
+|15    |FDSE     |    12|
+|16    |IBUF     |     3|
+|17    |OBUF     |    15|
 +------+---------+------+
 
 Report Instance Areas: 
 +------+----------+------------+------+
 |      |Instance  |Module      |Cells |
 +------+----------+------------+------+
-|1     |top       |            |   780|
-|2     |  btnDown |toPosedge   |   246|
-|3     |  btnUp   |toPosedge_0 |   245|
-|4     |  u2      |vga_640x480 |   171|
+|1     |top       |            |  1197|
+|2     |  Buzzer  |buzzer      |   372|
+|3     |  btnDown |toPosedge   |   281|
+|4     |  btnUp   |toPosedge_0 |   250|
+|5     |  u2      |vga_640x480 |   176|
 +------+----------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:07 ; elapsed = 00:01:20 . Memory (MB): peak = 1085.953 ; gain = 473.184
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:08 ; elapsed = 00:02:12 . Memory (MB): peak = 1147.938 ; gain = 535.668
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 13 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:53 ; elapsed = 00:01:15 . Memory (MB): peak = 1085.953 ; gain = 372.875
-Synthesis Optimization Complete : Time (s): cpu = 00:01:07 ; elapsed = 00:01:20 . Memory (MB): peak = 1085.953 ; gain = 473.184
+Synthesis finished with 0 errors, 13 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:42 ; elapsed = 00:02:06 . Memory (MB): peak = 1147.938 ; gain = 422.828
+Synthesis Optimization Complete : Time (s): cpu = 00:02:08 ; elapsed = 00:02:13 . Memory (MB): peak = 1147.938 ; gain = 535.668
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1097.020 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 104 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1156.598 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 158 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1097.020 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1156.598 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-25 Infos, 8 Warnings, 13 Critical Warnings and 0 Errors encountered.
+141 Infos, 105 Warnings, 13 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:15 ; elapsed = 00:01:33 . Memory (MB): peak = 1097.020 ; gain = 758.102
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1097.020 ; gain = 0.000
+synth_design: Time (s): cpu = 00:02:18 ; elapsed = 00:02:24 . Memory (MB): peak = 1156.598 ; gain = 817.848
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1156.598 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/vga/lab07_VGA_display/lab07_VGA_display.runs/synth_1/top_flyinglogo.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_flyinglogo_utilization_synth.rpt -pb top_flyinglogo_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Sep 25 01:37:13 2020...
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 25 09:45:33 2020...

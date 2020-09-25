@@ -53,7 +53,7 @@ module top_flyinglogo(clk, rst, hsync, vsync, vga_r, vga_g, vga_b, buzzer_out, b
    always @(posedge clk)
    begin
         if (rst_n) begin
-            focus <= 2'b01;
+            focus <= 2'b00;
         end
         else begin
             if (go_up == 1'b1) begin

@@ -6,31 +6,36 @@ module toPosedge(
     input  sig_in,
     output sig_out
     );
-
-	reg [100:0] cnt;
-	reg debounced, debounced_prev;
+    reg prevSign;
+	reg [99:0] cnt;
+	reg [1:0] debounced, debounced_prev;
 	
 	always @(posedge clk) begin
 	   if (rst_n) begin
 	       cnt <= 0;
-	       debounced <= 0;
+	       debounced <= 0; 
+	       prevSign <= 0;
 	   end
-	   else if (sig_in) begin
-	       cnt <= cnt + 1;
-	    end 
-	    else 
-	    begin
-	       cnt <= 0;
+	   else 
+	   begin 
+	       prevSign <= sig_in;
+           if (sig_in == prevSign) begin
+               cnt <= cnt + 1;
+            end 
+            else 
+            begin
+               cnt <= 0;
+            end
+            if (cnt >= 100'd1024) begin
+               debounced <= {1'b0, sig_in};
+            end
+            else begin
+               debounced <= 2'b10;
+            end
+            debounced_prev <= debounced;
 	    end
-	    if (cnt >= 100'd1024) begin
-	       debounced <= 1;
-	    end
-	    else begin
-	       debounced <= 0;
-	    end
-	    debounced_prev <= debounced;
 	 end
 	
-	assign sig_out = !debounced & debounced_prev;
+	assign sig_out = debounced == 2'b0 & debounced_prev == 2'b01;
 	
 endmodule

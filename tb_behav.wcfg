@@ -12,12 +12,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1122000001fs"></ZoomEndTime>
-      <Cursor1Time time="405755000fs"></Cursor1Time>
+      <ZoomEndTime time="175300001fs"></ZoomEndTime>
+      <Cursor1Time time="20195000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="85"></ValueColumnWidth>
+      <ValueColumnWidth column_width="80"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="6" />
    <wvobject fp_name="/tb/clk" type="logic">
@@ -39,11 +39,15 @@
       <obj_property name="label">tune_cycle</obj_property>
    </wvobject>
    <wvobject fp_name="/tb/mod/Buzzer/crtSong" type="array">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">crtSong[1:0]</obj_property>
       <obj_property name="ObjectShortName">crtSong[1:0]</obj_property>
+      <obj_property name="label">crtSong</obj_property>
    </wvobject>
    <wvobject fp_name="/tb/mod/Buzzer/crtTune" type="array">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">crtTune[31:0]</obj_property>
       <obj_property name="ObjectShortName">crtTune[31:0]</obj_property>
+      <obj_property name="label">crtTune</obj_property>
    </wvobject>
 </wave_config>

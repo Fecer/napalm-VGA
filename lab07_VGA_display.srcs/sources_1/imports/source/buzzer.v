@@ -27,7 +27,7 @@ output buzzer_out
     begin
         if (~rst )
         begin
-            crtSong <= 2'd1;
+            crtSong <= 2'd0;
             buzzer_state<=0;
             crtTune <= 0;  
             clk2 <= 0;
@@ -1496,6 +1496,7 @@ buzzerContinued[3][159] <= 0;
                 clk_1000 <= ~clk_1000;
                 cnt <= 0;
             end
+            \
             else
             begin
                 cnt<=cnt+32'b1;
